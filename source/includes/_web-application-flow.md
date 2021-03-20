@@ -26,13 +26,14 @@ Name | Type | Required | Description
 `state` | string | | An unguessable random string. It is used to protect against cross-site request forgery attacks.
 `response_type` | string | | The response type. Ususally `code`.
 
-All this things will make together a nice and understandable URI, like:
+All these things will make together a nice and understandable URI, like:
 
 `https://api.intra.42.fr/oauth/authorize?client_id=your_very_long_client_id&redirect_uri=http%3A%2F%2Flocalhost%3A1919%2Fusers%2Fauth%2Fft%2Fcallback&response_type=code&scope=public&state=a_very_long_random_string_witchmust_be_unguessable`
 
 <aside class="notice">
   <b>Small note</b>
-  When formatting the scopes parameters, be sure to read above about the distinction between **application-level** and <b>token-level</b> scopes. This has been a point of friction for some developers.
+  <br>
+  When formatting the scopes parameters, be sure to read above about the distinction between <b>application-level</b> and <b>token-level</b> scopes. This has been a point of friction for some developers.
 </aside>
 
 ## 42 redirects back to your site

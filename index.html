@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>API Reference</title>
+    <title>42 API Reference</title>
+    <link rel="icon" href="https://api.intra.42.fr/assets/42_logo_api.svg" type="image/svg+xml">
 
     <style media="screen">
       .highlight table td { padding: 5px; }
@@ -282,7 +283,7 @@
   color: #859900;
 }
     </style>
-    <link href="stylesheets/screen-c9d8fa83.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/screen-6e0c8bdc.css" rel="stylesheet" media="screen" />
     <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
       <script src="javascripts/all-a9fde460.js"></script>
 
@@ -291,7 +292,7 @@
     </script>
   </head>
 
-  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;python&quot;,&quot;javascript&quot;]">
+  <body class="index" data-languages="[&quot;shell&quot;,&quot;ruby&quot;,&quot;javascript&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
@@ -299,11 +300,10 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/logo-1e815a84.png" class="logo" alt="" />
+      <img src="images/logo-5aa6c45f.svg" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
               <a href="#" data-language-name="ruby">ruby</a>
-              <a href="#" data-language-name="python">python</a>
               <a href="#" data-language-name="javascript">javascript</a>
         </div>
         <div class="search">
@@ -315,219 +315,117 @@
             <a href="#introduction" class="toc-h1 toc-link" data-title="Introduction">Introduction</a>
           </li>
           <li>
-            <a href="#authentication" class="toc-h1 toc-link" data-title="Authentication">Authentication</a>
+            <a href="#current-version" class="toc-h1 toc-link" data-title="Current version">Current version</a>
           </li>
           <li>
-            <a href="#kittens" class="toc-h1 toc-link" data-title="Kittens">Kittens</a>
+            <a href="#specification" class="toc-h1 toc-link" data-title="Specification">Specification</a>
               <ul class="toc-list-h2">
                   <li>
-                    <a href="#get-all-kittens" class="toc-h2 toc-link" data-title="Get All Kittens">Get All Kittens</a>
+                    <a href="#authentication" class="toc-h2 toc-link" data-title="Authentication">Authentication</a>
                   </li>
                   <li>
-                    <a href="#get-a-specific-kitten" class="toc-h2 toc-link" data-title="Get a Specific Kitten">Get a Specific Kitten</a>
+                    <a href="#errors" class="toc-h2 toc-link" data-title="Errors">Errors</a>
                   </li>
                   <li>
-                    <a href="#delete-a-specific-kitten" class="toc-h2 toc-link" data-title="Delete a Specific Kitten">Delete a Specific Kitten</a>
+                    <a href="#scopes" class="toc-h2 toc-link" data-title="Scopes">Scopes</a>
+                  </li>
+                  <li>
+                    <a href="#pagination" class="toc-h2 toc-link" data-title="Pagination">Pagination</a>
+                  </li>
+                  <li>
+                    <a href="#filtering" class="toc-h2 toc-link" data-title="Filtering">Filtering</a>
+                  </li>
+                  <li>
+                    <a href="#sorting" class="toc-h2 toc-link" data-title="Sorting">Sorting</a>
+                  </li>
+                  <li>
+                    <a href="#rate-limiting" class="toc-h2 toc-link" data-title="Rate limiting">Rate limiting</a>
+                  </li>
+                  <li>
+                    <a href="#json-api-format" class="toc-h2 toc-link" data-title="JSON-API format">JSON-API format</a>
+                  </li>
+                  <li>
+                    <a href="#getting-information-about-your-token" class="toc-h2 toc-link" data-title="Getting information about your token">Getting information about your token</a>
                   </li>
               </ul>
           </li>
           <li>
-            <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
+            <a href="#getting-started" class="toc-h1 toc-link" data-title="Getting started">Getting started</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#create-an-application" class="toc-h2 toc-link" data-title="Create an application">Create an application</a>
+                  </li>
+                  <li>
+                    <a href="#get-your-credentials" class="toc-h2 toc-link" data-title="Get your credentials">Get your credentials</a>
+                  </li>
+                  <li>
+                    <a href="#make-basic-requests" class="toc-h2 toc-link" data-title="Make basic requests">Make basic requests</a>
+                  </li>
+                  <li>
+                    <a href="#pagination" class="toc-h2 toc-link" data-title="Pagination">Pagination</a>
+                  </li>
+                  <li>
+                    <a href="#limits" class="toc-h2 toc-link" data-title="Limits">Limits</a>
+                  </li>
+                  <li>
+                    <a href="#roles" class="toc-h2 toc-link" data-title="Roles">Roles</a>
+                  </li>
+                  <li>
+                    <a href="#getting-information-about-your-token" class="toc-h2 toc-link" data-title="Getting information about your token">Getting information about your token</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
+            <a href="#web-application-flow" class="toc-h1 toc-link" data-title="Web Application Flow">Web Application Flow</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#redirect-users-to-request-42-access" class="toc-h2 toc-link" data-title="Redirect users to request 42 access">Redirect users to request 42 access</a>
+                  </li>
+                  <li>
+                    <a href="#42-redirects-back-to-your-site" class="toc-h2 toc-link" data-title="42 redirects back to your site">42 redirects back to your site</a>
+                  </li>
+                  <li>
+                    <a href="#exchange-your-code-for-an-access-token" class="toc-h2 toc-link" data-title="Exchange your code for an access token">Exchange your code for an access token</a>
+                  </li>
+                  <li>
+                    <a href="#make-api-requests-with-your-token" class="toc-h2 toc-link" data-title="Make API requests with your token">Make API requests with your token</a>
+                  </li>
+              </ul>
           </li>
       </ul>
         <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/slatedocs/slate'>Documentation Powered by Slate</a></li>
+            <li><a href="https://profile.intra.42.fr/oauth/applications/new">Register your application</a></li>
+            <li><a href="https://https://api.intra.42.fr/apidoc">Official documentation</a></li>
         </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the Kittn API! You can use our API to access Kittn API endpoints, which can get information on various cats, kittens, and breeds in our database.</p>
+<p>The 42 API provide programmatic access to read and write 42&#39;s data. You can get and interact with the whole intranet data, and do things such creating a new message on the forum, read users profiles, get datas on a project, and more. On its second version, it identifies 42 applications and users using OAuth, and responses are available in <code>JSON</code>.</p>
 
-<p>We have language bindings in Shell, Ruby, Python, and JavaScript! You can view code examples in the dark area to the right, and you can switch the programming language of the examples with the tabs in the top right.</p>
+<p>Whether you&#39;re looking to build an official 42 integration for your service, or you just want to build something awesome, we can help you <a href="#getting-started">get started</a>.</p>
 
-<p>This example API documentation page was created with <a href="https://github.com/slatedocs/slate">Slate</a>. Feel free to edit it and use it as a base for your own API&#39;s documentation.</p>
-<h1 id='authentication'>Authentication</h1>
-<blockquote>
-<p>To authorize, use this code:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
+<p>The API works over the <code>HTTPS</code> protocol and accessed from the <code>api.intra.42.fr</code> domain.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
+<ul>
+<li>The current endpoint is https://api.intra.42.fr/v2.</li>
+<li>All data is sent and received as <code>JSON</code>.</li>
+<li>Blank fields are included as null instead of being omitted.</li>
+<li>All timestamps are returned in ISO 8601 format</li>
+</ul>
+<h1 id='current-version'>Current version</h1>
+<p>The current API version is <strong>2.0</strong>.</p>
+<h1 id='specification'>Specification</h1><h2 id='authentication'>Authentication</h2>
+<p>Authentication on the 42 API works with <a href="https://oauth.net/2/">OAuth2</a>.</p>
 
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="s2">"api_endpoint_here"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
+<p>OAuth2 is a protocol that lets external apps request authorization to private details in a user’s 42 account without getting their password. This is preferred over a basic authentication because tokens can be limited to specific types of data, and can be revoked by users at any time.</p>
 
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>Make sure to replace <code>meowmeowmeow</code> with your API key.</p>
-</blockquote>
+<p>All developers need to <a href="https://profile.intra.42.fr/oauth/applications/new">register their application</a> before getting started. A registered OAuth application is assigned a unique <strong>Client ID</strong> and <strong>Client Secret</strong>. The Client Secret should not be shared.</p>
 
-<p>Kittn uses API keys to allow access to the API. You can register a new Kittn API key at our <a href="http://example.com/developers">developer portal</a>.</p>
-
-<p>Kittn expects for the API key to be included in all API requests to the server in a header that looks like the following:</p>
-
-<p><code>Authorization: meowmeowmeow</code></p>
-
-<aside class="notice">
-You must replace <code>meowmeowmeow</code> with your personal API key.
-</aside>
-<h1 id='kittens'>Kittens</h1><h2 id='get-all-kittens'>Get All Kittens</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">()</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">kittens</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">();</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">[</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fluffums"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"calico"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="w">
-  </span><span class="p">},</span><span class="w">
-  </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-  </span><span class="p">}</span><span class="w">
-</span><span class="p">]</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves all kittens.</p>
-<h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://example.com/api/kittens</code></p>
-<h3 id='query-parameters'>Query Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Default</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>include_cats</td>
-<td>false</td>
-<td>If set to true, the result will also include cats.</td>
-</tr>
-<tr>
-<td>available</td>
-<td>true</td>
-<td>If set to false, the result will include kittens that have already been adopted.</td>
-</tr>
-</tbody></table>
-
-<aside class="success">
-Remember — a happy kitten is an authenticated kitten!
-</aside>
-<h2 id='get-a-specific-kitten'>Get a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">get</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="kd">get</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Max"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"breed"</span><span class="p">:</span><span class="w"> </span><span class="s2">"unknown"</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"fluffiness"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"cuteness"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint retrieves a specific kitten.</p>
-
-<aside class="warning">Inside HTML code blocks like this one, you can't use Markdown, so use <code>&lt;code&gt;</code> blocks to denote code.</aside>
-<h3 id='http-request-2'>HTTP Request</h3>
-<p><code>GET http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to retrieve</td>
-</tr>
-</tbody></table>
-<h2 id='delete-a-specific-kitten'>Delete a Specific Kitten</h2><div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s1">'kittn'</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="no">Kittn</span><span class="o">::</span><span class="no">APIClient</span><span class="p">.</span><span class="nf">authorize!</span><span class="p">(</span><span class="s1">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="nf">kittens</span><span class="p">.</span><span class="nf">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight python tab-python"><code><span class="kn">import</span> <span class="nn">kittn</span>
-
-<span class="n">api</span> <span class="o">=</span> <span class="n">kittn</span><span class="p">.</span><span class="n">authorize</span><span class="p">(</span><span class="s">'meowmeowmeow'</span><span class="p">)</span>
-<span class="n">api</span><span class="p">.</span><span class="n">kittens</span><span class="p">.</span><span class="n">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</code></pre></div><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="s2">"http://example.com/api/kittens/2"</span> <span class="se">\</span>
-  <span class="nt">-X</span> DELETE <span class="se">\</span>
-  <span class="nt">-H</span> <span class="s2">"Authorization: meowmeowmeow"</span>
-</code></pre></div><div class="highlight"><pre class="highlight javascript tab-javascript"><code><span class="kd">const</span> <span class="nx">kittn</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="dl">'</span><span class="s1">kittn</span><span class="dl">'</span><span class="p">);</span>
-
-<span class="kd">let</span> <span class="nx">api</span> <span class="o">=</span> <span class="nx">kittn</span><span class="p">.</span><span class="nx">authorize</span><span class="p">(</span><span class="dl">'</span><span class="s1">meowmeowmeow</span><span class="dl">'</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">max</span> <span class="o">=</span> <span class="nx">api</span><span class="p">.</span><span class="nx">kittens</span><span class="p">.</span><span class="k">delete</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span>
-</code></pre></div>
-<blockquote>
-<p>The above command returns JSON structured like this:</p>
-</blockquote>
-<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-  </span><span class="nl">"deleted"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">":("</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre></div>
-<p>This endpoint deletes a specific kitten.</p>
-<h3 id='http-request-3'>HTTP Request</h3>
-<p><code>DELETE http://example.com/kittens/&lt;ID&gt;</code></p>
-<h3 id='url-parameters-2'>URL Parameters</h3>
-<table><thead>
-<tr>
-<th>Parameter</th>
-<th>Description</th>
-</tr>
-</thead><tbody>
-<tr>
-<td>ID</td>
-<td>The ID of the kitten to delete</td>
-</tr>
-</tbody></table>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
-
-<p>The Kittn API uses the following error codes:</p>
+<p>Once the access token aquired, it can be passed in the URL with the <code>access_token</code> parameter, or in the <code>Authorization: Bearer &lt;TOKEN&gt;</code> header field.</p>
+<h2 id='errors'>Errors</h2>
+<p>The 42 API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -537,56 +435,462 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>The request is malformed</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>Unauthorized</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The kitten requested is hidden for administrators only.</td>
+<td>Forbidden</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified kitten could not be found.</td>
+<td>Page or resource not found</td>
 </tr>
 <tr>
-<td>405</td>
-<td>Method Not Allowed -- You tried to access a kitten with an invalid method.</td>
-</tr>
-<tr>
-<td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
-</tr>
-<tr>
-<td>410</td>
-<td>Gone -- The kitten requested has been removed from our servers.</td>
-</tr>
-<tr>
-<td>418</td>
-<td>I&#39;m a teapot.</td>
-</tr>
-<tr>
-<td>429</td>
-<td>Too Many Requests -- You&#39;re requesting too many kittens! Slow down!</td>
+<td>422</td>
+<td>Unprocessable entity</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>We have a problem with our server. Please try again later.</td>
 </tr>
 <tr>
-<td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>Connection refused</td>
+<td>Most likely cause is not using <code>HTTPS</code>.</td>
 </tr>
 </tbody></table>
+<h2 id='scopes'>Scopes</h2>
+<p>Applications can have different access scopes.</p>
+
+<p>Authorization scopes are a way to determine to what extent the client can use resources located in the provider.</p>
+
+<p>When the client requests the authorization it specifies in which scope they would like to be authorized. This information is then displayed to the user — resource owner — and they can decide whether or not they accept the given application to be able to act in specified scopes.</p>
+
+<blockquote>
+<p>Requesting a resource with wrong or insufficient scopes will return a <code>403 Forbidden</code> response, with more details in the <code>WWW-Authenticate</code> response header. For example, for an application without the <code>projects</code> scope:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight http tab-http"><code><span class="err">POST https://api.intra.42.fr/v2/topics/4242/messages
+
+</span><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">403</span> <span class="ne">Forbidden</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">no-store</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">Pragma</span><span class="p">:</span> <span class="s">no-cache</span>
+<span class="na">Transfer-Encoding</span><span class="p">:</span> <span class="s">chunked</span>
+<span class="na">Vary</span><span class="p">:</span> <span class="s">Origin</span>
+<span class="na">WWW-Authenticate</span><span class="p">:</span> <span class="s">Bearer realm="42 API", error="insufficient scope", error_description="The action need the following scopes: [forum]"</span>
+<span class="na">X-Application-Id</span><span class="p">:</span> <span class="s">7</span>
+<span class="na">X-Application-Name</span><span class="p">:</span> <span class="s">Brobot</span>
+<span class="na">X-Application-Roles</span><span class="p">:</span> <span class="s">None</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">SAMEORIGIN</span>
+<span class="na">X-Meta-Request-Version</span><span class="p">:</span> <span class="s">0.4.0</span>
+<span class="na">X-Rack-CORS</span><span class="p">:</span> <span class="s">preflight-hit; no-origin</span>
+<span class="na">X-Request-Id</span><span class="p">:</span> <span class="s">bb64ca44-142b-46a6-b590-af95e2e05e66</span>
+<span class="na">X-Runtime</span><span class="p">:</span> <span class="s">0.045248</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"error"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Forbidden"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"message"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Insufficient scope. The action need the following scopes: [forum] (Create, update and destroy topics and messages)"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div><h2 id='pagination'>Pagination</h2>
+<p>The 42 API paginates all resources on the index method.</p>
+
+<p>Requests that return multiple items will be paginated to 30 items by default. You have two ways to specify further pages:</p>
+
+<ul>
+<li>The <code>page</code> parameter. You can also set a custom page size (up to 100) with the <code>per_page</code> parameter.</li>
+<li>The <code>page[number]</code> paramater with the <code>page[size]</code> parameter.</li>
+</ul>
+
+<p>Note that for technical reasons not all endpoints can go up to 100 on the the <code>per_page</code> / <code>page[size]</code> parameter.</p>
+
+<blockquote>
+<p>The <code>Link</code> HTTP response header contains pagination data with <code>first</code>, <code>previous</code>, <code>next</code> and <code>last</code> raw pages links when available, under the format:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight http tab-http"><code><span class="err">link: &lt;http://api.intra.42.fr/v2/{Resource}?page=X+1&gt;; rel="next", &lt;http://api.intra.42.fr/v2/{Resource}?page=X-1&gt;; rel="prev", &lt;http://api.intra.42.fr/v2/{Resource}?page=1&gt;; rel="first", &lt;http://api.intra.42.fr/v2/{Resource}?page=X+n&gt;; rel="last"
+</span></code></pre></div>
+<p>There are also:</p>
+
+<ul>
+<li><code>X-Page</code>: a header field, which contains the current page.</li>
+<li><code>X-Per-Page</code>: a header field, which contains the current pagination length.</li>
+<li><code>X-Total</code>: a header field, which contains the count of pages.</li>
+</ul>
+<h2 id='filtering'>Filtering</h2>
+<p>The <code>filter</code> query parameter can be used to filter a collection on one or several fields for one or several values. The <code>filter</code> parameter takes the field to filter as a key, and the values to filter as the value. Multiples values must be comma-separated (<code>,</code>).</p>
+
+<p>For example, the following is a request for all users who have their piscine in 2013, but only in September or July:</p>
+<div class="highlight"><pre class="highlight http tab-http"><code><span class="nf">GET</span> <span class="nn">/users?filter[pool_year]=2013&amp;filter[pool_month]=september,july</span> <span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span>
+</code></pre></div><h2 id='sorting'>Sorting</h2>
+<p>All index endpoints support multiple sort fields by allowing comma-separated (<code>,</code>) sort fields, they are applied in the order specified.</p>
+
+<p>The sort order for each sort field is ascending unless it is prefixed with a minus (U+002D HYPHEN-MINUS, <code>-</code>), in which case it is descending.</p>
+
+<blockquote>
+<p>For example,
+<code>http
+GET /users?sort=kind,-login
+</code>
+will return the users sorted by kind. Any users with the same kind will then be sorted by their login in descending alphabetical order.</p>
+</blockquote>
+<h2 id='rate-limiting'>Rate limiting</h2>
+<p>By default, your applications is limited to <strong>2 requests per second</strong> and <strong>1200 requests per hour</strong>.</p>
+<h2 id='json-api-format'>JSON-API format</h2>
+<p>The API actually support (in an alpha-stage) the <a href="http://jsonapi.org/">JSON-API</a> format specification. You can request a JSON-API by specifying the request <code>ContentType</code> as <code>application/vnd.api+json</code>.</p>
+<h2 id='getting-information-about-your-token'>Getting information about your token</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer &lt;YOUR_ACCESS_TOKEN&gt;"</span> https://api.intra.42.fr/oauth/token/info
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resource_owner_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scopes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"public"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"expires_in_seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">7174</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"application"</span><span class="p">:</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3089cd94d72cc9109800a5eea5218ed4c3e891ec1784874944225878b95867f9"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="mi">1439460680</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>If you want to know more about your token, you can fetch <code>https://api.intra.42.fr/oauth/token/info</code>.</p>
+<h1 id='getting-started'>Getting started</h1><h2 id='create-an-application'>Create an application</h2>
+<p>In order to use the 42 API, you first need to create a v2 application <a href="https://profile.intra.42.fr/oauth/applications/new">here</a>.</p>
+
+<p>You will need to configure a few things in order to make your application:</p>
+
+<ul>
+<li>The <strong>name</strong> of your application, wich needs to be explicit (please avoid names like test or app).</li>
+<li>The <strong>redirect URI(s)</strong>. These URI(s) are needed if you app acts as a third tier between the 42 data and an user (this <em>flow</em> is called <code>Web Application Flow</code>), and specify where the user need to be redirected after his authentication. If you plan to use your app just as a server-side app, without user interaction, you can set any valid adress, you&#39;ll not need theses URI.</li>
+<li>The <strong>scopes</strong> you&#39;ll need. A scope is an aera of access. By default, your application only have access to public data, it&#39;s your call to add more scopes. Try to <em>only add the scopes you&#39;ll really need</em>, you can change your application scopes later if you need more permissions.</li>
+<li><strong>Visibility</strong>. Flag the <code>public</code> option if you want your application to be visible to other users or not.</li>
+<li>All the other fields are facultative and can be set later.</li>
+</ul>
+
+<blockquote>
+<p>Note: The complete description of the authentication process through the OAuth2 Web Application Flow is described in <a href="#web-application-flow">the next section of this guide</a>.</p>
+</blockquote>
+<h2 id='get-your-credentials'>Get your credentials</h2>
+<p>Awesome! You just created your first application!</p>
+
+<p>Now, take a look on your application page, we got a lot of information there, but the most important is:</p>
+
+<ul>
+<li>The <strong>client uid</strong>, an unique identifier for your application.</li>
+<li>The <strong>client secret</strong>, a secret passphrase for your application, which <strong>must be kept secret</strong>, and only used on server side, where users can&#39;t see it.</li>
+</ul>
+<h2 id='make-basic-requests'>Make basic requests</h2>
+<p>Now, you have all you need to setup a little basic script using the API trough your application. In this example, we will use the <strong>Client Credentials Flow</strong>, in Ruby, with the <a href="https://github.com/intridea/oauth2">OAuth2 Ruby wrapper</a>, but OAuth2 wrappers exist for most languages. The Client Credentials Flow is probably the most simple flow of OAuth2 flows. The main difference from the others is that this flow is not associated with a user. You can read more about this OAuth flow directly from the <a href="https://tools.ietf.org/html/rfc6749#section-1.3.4">reference documentation of OAuth2</a>. <em>RIP</em>.</p>
+
+<p>First of all, we&#39;ll request an access token with our application credentials.</p>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="nb">require</span> <span class="s2">"oauth2"</span>
+
+<span class="no">UID</span> <span class="o">=</span> <span class="s2">"Your application uid"</span>
+<span class="no">SECRET</span> <span class="o">=</span> <span class="s2">"Your secret token"</span>
+
+<span class="c1"># Create the client with your credentials</span>
+<span class="n">client</span> <span class="o">=</span> <span class="no">OAuth2</span><span class="o">::</span><span class="no">Client</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="no">UID</span><span class="p">,</span> <span class="no">SECRET</span><span class="p">,</span> <span class="ss">site: </span><span class="s2">"https://api.intra.42.fr"</span><span class="p">)</span>
+
+<span class="c1"># Get an access token</span>
+<span class="n">token</span> <span class="o">=</span> <span class="n">client</span><span class="p">.</span><span class="nf">client_credentials</span><span class="p">.</span><span class="nf">get_token</span>
+</code></pre></div>
+<p>Requesting an access token with the client credentials flow is, in fact, just a <code>POST</code> request to the <code>/oauth/token</code> endpoint with a <code>grant_type</code> parameter set to <code>client_credentials</code>. If you wanted to do this with the command line, the equivalent Curl line will be:</p>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-X</span> POST <span class="nt">--data</span> <span class="s2">"grant_type=client_credentials&amp;client_id=MY_AWESOME_UID&amp;client_secret=MY_AWESOME_SECRET"</span> https://api.intra.42.fr/oauth/token
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"access_token"</span><span class="p">:</span><span class="w"> </span><span class="s2">"42804d1f2480c240f94d8f24b45b318e4bf42e742f0c06a42c6f4242787af42d"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"token_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"bearer"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"expires_in"</span><span class="p">:</span><span class="w"> </span><span class="mi">7200</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scope"</span><span class="p">:</span><span class="w"> </span><span class="s2">"public"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1443451918</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>Now, we can fetch all the public data that doesn&#39;t need user authentication, like the list of the cursuses at 42. The <a href="#todo=reference">reference documentation</a> gave us (<a href="#todo=/v2/cursus">by the <code>Cursus</code> resource page</a>) the endpoint <code>/v2/cursus</code>.</p>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="n">token</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"/v2/cursus"</span><span class="p">).</span><span class="nf">parsed</span>
+<span class="c1"># =&gt; [{"id"=&gt;1, "created_at"=&gt;"2014-11-02T17:43:38.480+01:00", "name"=&gt;"42", "slug"=&gt;"42", "users_count"=&gt;1918, "users_url"=&gt;"https://api.intra.42.fr/v2/cursus/42/users", "projects_url"=&gt;"https://api.intra.42.fr/v2/cursus/42/projects", "topics_url"=&gt;"https://api.intra.42.fr/v2/cursus/42/topics"}, ...]</span>
+</code></pre></div>
+<p>Hooray! We got our data! And what about the users in the cursus <code>42</code>?</p>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="n">users_in_cursus</span> <span class="o">=</span> <span class="n">token</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"/v2/cursus/42/users"</span><span class="p">).</span><span class="nf">parsed</span>
+<span class="c1"># =&gt; {"id"=&gt;2, "login"=&gt;"avisenti", "url"=&gt;"https://api.intra.42.fr/v2/users/avisenti", "end_at"=&gt;nil}, {"id"=&gt;3, "login"=&gt;"spariaud", "url"=&gt;"https://api.intra.42.fr/v2/users/spariaud", "end_at"=&gt;nil}, ...</span>
+
+<span class="n">users_in_cursus</span><span class="p">.</span><span class="nf">count</span>
+<span class="c1"># =&gt; 30</span>
+</code></pre></div>
+<p>What the hell? Only 30 users? And what does the <a href="#todo">documentation</a> say about that?</p>
+<h2 id='pagination'>Pagination</h2>
+<p>The documentation says that the resource is paginated by 30 items by defaut, and that we can specify a <code>page[number]</code> parameter (or, more simpler, the <code>page</code> parameter), in order to navigate trough it. Let&#39;s try to fetch the second page:</p>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="n">second_page</span> <span class="o">=</span> <span class="n">token</span><span class="p">.</span><span class="nf">get</span><span class="p">(</span><span class="s2">"/v2/cursus/42/users"</span><span class="p">,</span> <span class="ss">params: </span><span class="p">{</span><span class="ss">page: </span><span class="p">{</span><span class="ss">number: </span><span class="mi">2</span><span class="p">}})</span>
+<span class="c1"># =&gt; #&lt;OAuth2::Response:0x007f9ba3b7eb98 @response=#&lt;Faraday::Response:0x007f9ba3b949c0 @on_complete_callbacks=[], @env=#&lt;Faraday::Env @method=:get @body="[{\"id\":35,\"login\":\"droger\",\"url\":\"https://api.intra.42.fr/v2/users/droger\",\"end_at\":null},{\"id\":36,\"login\":\"edelbe\",\"url\":\"https://api.intra.42.fr/v2/users/edelbe\"...</span>
+
+<span class="n">second_page</span><span class="p">.</span><span class="nf">parsed</span>
+<span class="c1"># =&gt; {"id"=&gt;35, "login"=&gt;"droger", "url"=&gt;"https://api.intra.42.fr/v2/users/droger", "end_at"=&gt;nil}, {"id"=&gt;36, "login"=&gt;"edelbe", "url"=&gt;"https://api.intra.42.fr/v2/users/edelbe", "end_at"=&gt;nil}, ...</span>
+</code></pre></div>
+<p>Well, it seems to work! But how can we know if there is a next page? One simple solution is to go forward until the call returns an empty array, but if we need more informations, we can take a look on the <code>Link</code> HTTP response header.</p>
+<div class="highlight"><pre class="highlight ruby tab-ruby"><code><span class="n">second_page</span><span class="p">.</span><span class="nf">headers</span><span class="p">[</span><span class="s2">"Link"</span><span class="p">]</span>
+<span class="c1"># =&gt; "&lt;https://api.intra.42.fr/v2/cursus/42/users?page=3&gt;; rel=\"next\", &lt;https://api.intra.42.fr/v2/cursus/42/users?page=1&gt;; rel=\"prev\", &lt;https://api.intra.42.fr/v2/cursus/42/users?page=1&gt;; rel=\"first\", &lt;https://api.intra.42.fr/v2/cursus/42/users?page=64&gt;; rel=\"last\""</span>
+</code></pre></div>
+<p>We now have the links for the first, the next, the previous and the last page. The response headers contain a lot of <em>more or less</em> useful informations, like the name of your application, the id and the roles.</p>
+<div class="highlight"><pre class="highlight http tab-http"><code><span class="err">GET https://api.intra.42.fr/v2/messages?page[number]=1
+
+</span><span class="k">HTTP</span><span class="o">/</span><span class="m">1.1</span> <span class="m">200</span> <span class="ne">OK</span>
+<span class="na">Cache-Control</span><span class="p">:</span> <span class="s">max-age=0, private, must-revalidate</span>
+<span class="na">Content-Type</span><span class="p">:</span> <span class="s">application/json; charset=utf-8</span>
+<span class="na">ETag</span><span class="p">:</span> <span class="s">W/"b326132feb08f61b7de85a13ca83f264"</span>
+<span class="na">Link</span><span class="p">:</span> <span class="s">&lt;https://api.intra.42.fr/v2/messages?page=1&gt;; rel="first", &lt;https://api.intra.42.fr/v2/messages?page=1&gt;; rel="prev", &lt;https://api.intra.42.fr/v2/messages?page=586&gt;; rel="last", &lt;https://api.intra.42.fr/v2/messages?page=3&gt;; rel="next"</span>
+<span class="na">Transfer-Encoding</span><span class="p">:</span> <span class="s">chunked</span>
+<span class="na">Vary</span><span class="p">:</span> <span class="s">Origin</span>
+<span class="na">X-Application-Id</span><span class="p">:</span> <span class="s">318</span>
+<span class="na">X-Application-Name</span><span class="p">:</span> <span class="s">test-app</span>
+<span class="na">X-Application-Roles</span><span class="p">:</span> <span class="s">None</span>
+<span class="na">X-Content-Type-Options</span><span class="p">:</span> <span class="s">nosniff</span>
+<span class="na">X-Frame-Options</span><span class="p">:</span> <span class="s">SAMEORIGIN</span>
+<span class="na">X-Meta-Request-Version</span><span class="p">:</span> <span class="s">0.4.0</span>
+<span class="na">X-Page</span><span class="p">:</span> <span class="s">2</span>
+<span class="na">X-Per-Page</span><span class="p">:</span> <span class="s">30</span>
+<span class="na">X-Rack-CORS</span><span class="p">:</span> <span class="s">preflight-hit; no-origin</span>
+<span class="na">X-Request-Id</span><span class="p">:</span> <span class="s">c763e95e-95a6-4307-88da-f441038be349</span>
+<span class="na">X-Runtime</span><span class="p">:</span> <span class="s">0.278242</span>
+<span class="na">X-Total</span><span class="p">:</span> <span class="s">17570</span>
+<span class="na">X-XSS-Protection</span><span class="p">:</span> <span class="s">1; mode=block</span>
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="err">...</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>You can also increase the number of results returned by the request with the <code>page[size]</code> parameter (or the <code>per_page</code> parameter). Almost all the endpoints can return up to 100 results per page.</p>
+<h2 id='limits'>Limits</h2>
+<p>By default, your applications is limited to <strong>2 requests per second</strong> and <strong>1200 requests per hour</strong>.</p>
+<h2 id='roles'>Roles</h2>
+<p>Applications can have <strong>roles</strong>, which grant particular privileges.</p>
+
+<p>This is a short list of the most common roles:</p>
+
+<table><thead>
+<tr>
+<th>Role</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>Alpha</td>
+<td>Unstable features</td>
+</tr>
+<tr>
+<td>Beta</td>
+<td>Intranet beta-testers</td>
+</tr>
+<tr>
+<td>Official App</td>
+<td>Approved application to up rate limit</td>
+</tr>
+<tr>
+<td>Certified App</td>
+<td>Certified application manually by a staff member to up rate limit and access to more features</td>
+</tr>
+<tr>
+<td>Moderator</td>
+<td>Moderate topics, messages and versions on the forum</td>
+</tr>
+<tr>
+<td>Basic Tutor</td>
+<td>Manage projects, scales and all cursus related data</td>
+</tr>
+<tr>
+<td>Basic Staff</td>
+<td>Member of the staff, can manage community services, closes, exams and access advanced student data</td>
+</tr>
+</tbody></table>
+
+<p>The roles of your application are present in the <code>x-application-roles</code> field of the response header.</p>
+
+<aside class="notice">
+  If your application is production ready, public and useful, you can <a href="mailto:intrateam@staff.42.fr">send us an email</a> to request the <code>Official App</code> role.
+</aside>
+
+<p>That&#39;s it for now. If your want to go deeper, and allow users to use their 42 account from a third-party website, you can continue with the <a href="#web-application-flow">web application flow tutorial</a>.</p>
+<h2 id='getting-information-about-your-token'>Getting information about your token</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> https://api.intra.42.fr/oauth/token/info
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resource_owner_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">74</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"scopes"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"public"</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"expires_in_seconds"</span><span class="p">:</span><span class="w"> </span><span class="mi">7174</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"application"</span><span class="p">:</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"uid"</span><span class="p">:</span><span class="w"> </span><span class="s2">"3089cd94d72cc9109800a5eea5218ed4c3e891ec1784874944225878b95867f9"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="mi">1439460680</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>If you want to know more about your token, you can fetch the <code>https://api.intra.42.fr/oauth/token/info</code> endpoint.</p>
+<h1 id='web-application-flow'>Web Application Flow</h1>
+<p>This is a description of the OAuth2 flow for 3rd party websites.</p>
+
+<p>In the Web Application flow (also known as the Authorization Code flow), the resource owner (a 42 user) is first redirected by the application to the OAuth authorization server at the API provider. The authorization server checks to see if the user has an active session (in our case, if the user is logged on the 42 intranet). If he does, the authorization server prompts him for access to the requested data. After he grants access, he is redirected back to the web application and an authorization code is included in the URL as the code query parameter: <code>http://www.example.com/oauth_callback?code=ABC1234</code></p>
+
+<p>Because the code is passed as a query parameter, the web browser sends it along to the web server that is acting as the OAuth client. This authorization code is then exchanged for an access token using a server-to-server call from the application to the authorization server. This access token is used by the client to make API calls.</p>
+
+<p>Let&#39;s see how we can implement it with the 42 API.</p>
+<h2 id='redirect-users-to-request-42-access'>Redirect users to request 42 access</h2>
+<p>That&#39;s the first step. Link or redirect users to the API authorize url: <code>https://api.intra.42.fr/oauth/authorize</code>. This must be properly formatted for your application and will return a permissions screen for the user to authorize. For convenience, a formatted authorize URL including your <code>client_id</code> is provided for each application in the <a href="https://profile.intra.42.fr/oauth/applications">apps page</a>.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET https://api.intra.42.fr/oauth/authorize</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th style="text-align: center">Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>client_id</code></td>
+<td>string</td>
+<td style="text-align: center">✓</td>
+<td>The client ID you received from 42 when you <a href="https://profile.intra.42.fr/oauth/applications/new">registered</a> your application.</td>
+</tr>
+<tr>
+<td><code>redirect_uri</code></td>
+<td>string</td>
+<td style="text-align: center"></td>
+<td>The URL in your app where users will be sent after authorization. See details below about <a href="#redirect-urls">redirect urls</a>.</td>
+</tr>
+<tr>
+<td><code>scope</code></td>
+<td>string</td>
+<td style="text-align: center"></td>
+<td>A space separated list of <a href="#scopes">scopes</a>. If not provided, <code>scope</code> defaults to an empty list of scopes for users that don&#39;t have a valid token for the app. For users who do already have a valid token for the app, the user won&#39;t be shown the OAuth authorization page with the list of scopes. Instead, this step of the flow will automatically complete with the same scopes that were used last time the user completed the flow.</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string</td>
+<td style="text-align: center"></td>
+<td>An unguessable random string. It is used to protect against cross-site request forgery attacks.</td>
+</tr>
+<tr>
+<td><code>response_type</code></td>
+<td>string</td>
+<td style="text-align: center"></td>
+<td>The response type. Ususally <code>code</code>.</td>
+</tr>
+</tbody></table>
+
+<p>All this things will make together a nice and understandable URI, like:</p>
+
+<p><code>https://api.intra.42.fr/oauth/authorize?client_id=your_very_long_client_id&amp;redirect_uri=http%3A%2F%2Flocalhost%3A1919%2Fusers%2Fauth%2Fft%2Fcallback&amp;response_type=code&amp;scope=public&amp;state=a_very_long_random_string_witchmust_be_unguessable</code></p>
+
+<aside class="notice">
+  <b>Small note</b>
+  When formatting the scopes parameters, be sure to read above about the distinction between **application-level** and <b>token-level</b> scopes. This has been a point of friction for some developers.
+</aside>
+<h2 id='42-redirects-back-to-your-site'>42 redirects back to your site</h2>
+<p><img src="https://raw.githubusercontent.com/42School/api-documentation/master/images/authorize_dialog.png" alt="auth_dialog" /></p>
+
+<p><em>The 42 auth dialog</em></p>
+
+<p>If the user grants the permission for your application to use the requested data (see <a href="#scopes">scopes</a>), it will be redirected to your <code>redirect_uri</code> with a temporary code in a GET <code>code</code> parameter as well as the state you provided in the previous step in a <code>state</code> parameter.</p>
+
+<aside class="warning">
+  If the states don't match, the request has been created by a third party and <b>the process should be aborted</b>.
+</aside>
+<h2 id='exchange-your-code-for-an-access-token'>Exchange your code for an access token</h2>
+<p>You&#39;re almost there! The last thing to do is a <code>POST</code> request to the <code>https://api.intra.42.fr/oauth/token</code> endpoint, with your <code>client_id</code>, your <code>client_secret</code>, the previous <code>code</code> and your <code>redirect_uri</code>. <strong>This request must be performed on server side, over a secure connection</strong>.</p>
+
+<p>Useless note: This corresponds to the token endpoint, section 3.2 of the OAuth 2 RFC. Happy?</p>
+<h3 id='http-request-2'>HTTP Request</h3>
+<p><code>POST https://api.intra.42.fr/oauth/token</code></p>
+<h3 id='query-parameters-2'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th style="text-align: center">Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td><code>grant_type</code></td>
+<td>string</td>
+<td style="text-align: center">✓</td>
+<td>The grant type. In this case, it&#39;s <code>authorization_code</code>.</td>
+</tr>
+<tr>
+<td><code>client_id</code></td>
+<td>string</td>
+<td style="text-align: center">✓</td>
+<td>The client ID you received from 42 when you registered.</td>
+</tr>
+<tr>
+<td><code>client_secret</code></td>
+<td>string</td>
+<td style="text-align: center">✓</td>
+<td>The client secret you received from 42 when you registered.</td>
+</tr>
+<tr>
+<td><code>code</code></td>
+<td>string</td>
+<td style="text-align: center">✓</td>
+<td>The code you received as a response to <a href="#redirect-users-to-request-42-access">step 1</a>.</td>
+</tr>
+<tr>
+<td><code>redirect_uri</code></td>
+<td>string</td>
+<td style="text-align: center"></td>
+<td>The URL in your app where users will be sent after authorization.</td>
+</tr>
+<tr>
+<td><code>state</code></td>
+<td>string</td>
+<td style="text-align: center"></td>
+<td>The unguessable random string you optionally provided in <a href="#redirect-users-to-request-42-access">step 1</a>.</td>
+</tr>
+</tbody></table>
+
+<blockquote>
+<p>For example, with <code>curl</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-F</span> <span class="nv">grant_type</span><span class="o">=</span>authorization_code <span class="se">\</span>
+<span class="nt">-F</span> <span class="nv">client_id</span><span class="o">=</span>9b36d8c0db59eff5038aea7a417d73e69aea75b41aac771816d2ef1b3109cc2f <span class="se">\</span>
+<span class="nt">-F</span> <span class="nv">client_secret</span><span class="o">=</span>d6ea27703957b69939b8104ed4524595e210cd2e79af587744a7eb6e58f5b3d2 <span class="se">\</span>
+<span class="nt">-F</span> <span class="nv">code</span><span class="o">=</span>fd0847dbb559752d932dd3c1ac34ff98d27b11fe2fea5a864f44740cd7919ad0 <span class="se">\</span>
+<span class="nt">-F</span> <span class="nv">redirect_uri</span><span class="o">=</span>https://myawesomeweb.site/callback <span class="se">\</span>
+<span class="nt">-X</span> POST https://api.intra.42.fr/oauth/token
+</code></pre></div><h2 id='make-api-requests-with-your-token'>Make API requests with your token</h2>
+<p>Include your token in all your requests in a authorization header:</p>
+
+<p><code>Authorization: Bearer &lt;YOUR_ACCESS_TOKEN&gt;</code></p>
+
+<blockquote>
+<p>For example, you can fetch the current token owner, with <code>curl</code>:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer YOUR_ACCESS_TOKEN"</span> https://api.intra.42.fr/v2/me
+</code></pre></div><div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="mi">23</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"[email protected]"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"login"</span><span class="p">:</span><span class="s2">"30_1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"url"</span><span class="p">:</span><span class="w"> </span><span class="s2">"http://localhost:13000/v2/users/30_1"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0611041698"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"displayname"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mathieu Trentin"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"image_url"</span><span class="p">:</span><span class="s2">"https://cdn.intra.42.fr/userprofil/30_1.jpg"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"staff?"</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"correction_point"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pool_month"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"pool_year"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"wallet"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"groups"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"cursus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"achievements"</span><span class="p">:[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"titles"</span><span class="p">:[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"partnerships"</span><span class="p">:[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"patroned"</span><span class="p">:[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"patroning"</span><span class="p">:[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"expertises_users"</span><span class="p">:[</span><span class="err">...</span><span class="p">],</span><span class="w">
+  </span><span class="nl">"campus"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]}</span><span class="w">
+</span></code></pre></div>
+<aside class="notice">
+  If you can't modify <code>HTTP</code> headers, you can send your token as a <code>access_token</code> parameter.
+</aside>
 
       </div>
       <div class="dark-box">
           <div class="lang-selector">
                 <a href="#" data-language-name="shell">shell</a>
                 <a href="#" data-language-name="ruby">ruby</a>
-                <a href="#" data-language-name="python">python</a>
                 <a href="#" data-language-name="javascript">javascript</a>
           </div>
       </div>

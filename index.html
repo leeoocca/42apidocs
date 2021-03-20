@@ -769,13 +769,14 @@ will return the users sorted by kind. Any users with the same kind will then be 
 </tr>
 </tbody></table>
 
-<p>All this things will make together a nice and understandable URI, like:</p>
+<p>All these things will make together a nice and understandable URI, like:</p>
 
 <p><code>https://api.intra.42.fr/oauth/authorize?client_id=your_very_long_client_id&amp;redirect_uri=http%3A%2F%2Flocalhost%3A1919%2Fusers%2Fauth%2Fft%2Fcallback&amp;response_type=code&amp;scope=public&amp;state=a_very_long_random_string_witchmust_be_unguessable</code></p>
 
 <aside class="notice">
   <b>Small note</b>
-  When formatting the scopes parameters, be sure to read above about the distinction between **application-level** and <b>token-level</b> scopes. This has been a point of friction for some developers.
+  <br>
+  When formatting the scopes parameters, be sure to read above about the distinction between <b>application-level</b> and <b>token-level</b> scopes. This has been a point of friction for some developers.
 </aside>
 <h2 id='42-redirects-back-to-your-site'>42 redirects back to your site</h2>
 <p><img src="https://raw.githubusercontent.com/42School/api-documentation/master/images/authorize_dialog.png" alt="auth_dialog" /></p>
